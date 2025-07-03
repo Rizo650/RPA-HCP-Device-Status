@@ -8,7 +8,7 @@ When offline devices are detected, an email is automatically sent using a predef
 
 ## Project Description
 
-This automation logs into the HCP portal, navigates to the monitoring section, and scrapes device status data. It processes the information **in-memory** using UiPath, and if offline devices are found, it sends an alert email using a **formatted message body**.
+This automation logs into the HCP portal, navigates to the monitoring section, and scrapes device status data. It processes the information in-memory using UiPath, and if offline devices are found, it sends an alert email using a **formatted message body**.
 
 The process leverages **REFramework** for reliability, retry handling, and structured exception handling.
 
@@ -18,9 +18,9 @@ The process leverages **REFramework** for reliability, retry handling, and struc
 
 - Automated HCP website interaction
 - In-memory processing of device statuses (no Excel export)
-- **Automatic email alerts** if offline devices are found
-- Email uses a **custom, pre-formatted message body**
-- Built with **REFramework** for stability and modularity
+- Automatic email alerts if offline devices are found
+- Email uses a custom, pre-formatted message body
+- Built with REFramework for stability and modularity
 - Testable design with dedicated xaml modules
 
 ---
@@ -57,12 +57,12 @@ The process leverages **REFramework** for reliability, retry handling, and struc
 - `HCPActivity.xaml`:
   - Navigates to the device monitoring section
   - Scrapes all device statuses
-  - Filters any **Offline** devices
+  - Filters any Offline devices
   - Formats data into a message body
 
 ### 4. **Send Alert (If Needed)**
 - If offline devices are found:
-  - Sends a **formatted email alert**
+  - Sends a formatted email alert
 - If no devices are offline:
   - Process ends quietly
 
